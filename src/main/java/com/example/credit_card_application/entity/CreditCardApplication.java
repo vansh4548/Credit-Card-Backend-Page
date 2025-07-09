@@ -3,11 +3,19 @@ package com.example.credit_card_application.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "credit_card_applications")
+@Table(name = "credit_card_applications",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "aadhaarNumber"),
+                @UniqueConstraint(columnNames = "panNumber"),
+                @UniqueConstraint(columnNames = "mobileNumber"),
+                @UniqueConstraint(columnNames = "email")
+        })
 public class CreditCardApplication {
 
     @Id
@@ -78,8 +86,14 @@ public class CreditCardApplication {
     @Column(name = "referral_code")
     private String referralCode;
 
-    @Column(name = "application_date")
-    private Date applicationDate = new Date();
+    @Column(name = "application_date", updatable = false)
+    @CreationTimestamp
+    private LocalDateTime applicationDate;
+
+    @PrePersist
+    protected void onCreate() {
+        applicationDate = LocalDateTime.now();
+    }
 
     @Column(name = "status")
     private String status = "PENDING";

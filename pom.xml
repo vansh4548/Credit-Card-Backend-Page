@@ -45,7 +45,19 @@
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
-			<version>3.2.0</version> <!-- Latest stable version -->
+			<version>3.2.0</version>
+			<!-- For Java 17+ compatibility -->
+			<exclusions>
+				<exclusion>
+					<groupId>net.bytebuddy</groupId>
+					<artifactId>byte-buddy</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>net.bytebuddy</groupId>
+			<artifactId>byte-buddy</artifactId>
+			<version>1.14.7</version> <!-- Newer version -->
 		</dependency>
 		<dependency>
 			<groupId>com.mysql</groupId>

@@ -1,14 +1,14 @@
 package com.example.credit_card_application.controller;
-
 import com.example.credit_card_application.dto.CreditCardApplicationDTO;
 import com.example.credit_card_application.entity.CreditCardApplication;
 import com.example.credit_card_application.service.CreditCardApplicationService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequestMapping("/api/credit-card")
 public class CreditCardApplicationController {
 
