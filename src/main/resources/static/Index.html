@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AU Bank Credit Cards</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9fb;
+      color: #1a1a1a;
+    }
+
+    /* Top section */
+    .info-section {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    .info-section img {
+      width: 150px;
+      margin-bottom: 25px;
+    }
+
+    .info-section h1 {
+      font-size: 28px;
+      color: #2c2d9d;
+      margin-bottom: 30px;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .badge:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .badge i {
+      font-style: normal;
+    }
+
+    /* Cards section */
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 320px;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card img {
+      width: 100px;
+      margin: 0 auto 20px auto;
+      display: block;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin: 0 0 10px;
+      text-align: left;
+    }
+
+    .card-content {
+      max-height: 180px;
+      overflow-y: auto;
+      padding-right: 8px;
+    }
+
+    .card-content p {
+      margin: 8px 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .card-content p::before {
+      content: "✔️ ";
+      color: green;
+    }
+
+    .card-content::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .card-content::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 5px;
+    }
+
+    .apply-button {
+      background: linear-gradient(to right, #ff6a00, #ffc107);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 15px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .apply-button:hover {
+      background: linear-gradient(to right, #ff8000, #ffcc33);
+    }
+
+    .kyc-box {
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 30px 20px;
+      max-width: 700px;
+      margin: 40px auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .kyc-box h2 {
+      font-size: 20px;
+      color: #4b0082;
+      margin-bottom: 15px;
+    }
+
+    .kyc-box p {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .kyc-button {
+      background-color: #7a1fa2;
+      color: #fff;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .kyc-button:hover {
+      background-color: #9c27b0;
+    }
+
+    .kyc-note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- AU Bank Header Section -->
+  <div class="info-section">
+    <img src="logo.png" alt="AU Bank Logo" />
+    <h1>Explore Our Top AU Bank Credit Cards</h1>
+    <div class="badges">
+      <div class="badge">✅ <i>Trusted by 1M+ Customers</i></div>
+      <div class="badge">🔒 <i>Bank-Level Encryption</i></div>
+      <div class="badge">📞 <i>24/7 Customer Support</i></div>
+    </div>
+  </div>
+
+  <!-- Credit Card Boxes -->
+  <div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="instapay.webp" alt="RuPay Card">
+      <h3>InstaPay RuPay Credit Card</h3>
+      <div class="card-content">
+        <p>Withdraw up to 45% of your credit limit as cash when needed.</p>
+        <p>Cashback Rewards: Earn cashback on eligible UPI transactions and online purchases.</p>
+        <p>Universal UPI Compatibility: Works with major UPI apps like Google Pay, PhonePe, and Paytm.</p>
+        <p>Smart Control & Tracking: Manage limits, transactions, and security settings easily via the AU 0101 app.</p>
+        <p>1% Fuel Surcharge Waiver: Save on fuel with a 1% waiver at petrol stations across India.</p>
+      </div>
+      <a href="form.html" target="_blank">
+      <button class="apply-button">Apply Now</button>
+    </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="lit.png" alt="VISA Card">
+      <h3>AU LIT VISA Credit Card</h3>
+      <div class="card-content">
+        <p>Free OTT Subscriptions: Activate entertainment packs and get access to Netflix, Amazon Prime, Hotstar, and
+          more.</p>
+        <p>1% Fuel Surcharge Waiver: Save on fuel with a 1% waiver at petrol stations across India.</p>
+        <p>Tap-and-Pay Enabled: Contactless payments for fast and secure checkouts.</p>
+        <p>Switch Benefits Anytime: Customize your card’s features in real-time through the AU 0101 app—flexibility like
+          no other card.</p>
+        <p>Accepted Nationwide: Use it online, in-store, or while traveling—accepted widely across all major platforms
+          and merchants.</p>
+      </div>
+    <a href="form.html">
+      <button class="apply-button">Apply Now</button>
+    </a>
+    </div>
+
+  </div>
+
+  <!-- KYC Section -->
+  <div class="kyc-box">
+    <h2>Already Applied? Complete Your KYC</h2>
+    <p>
+      To activate your card, please complete your Know Your Customer (KYC) verification.<br />
+      This helps us protect your account and comply with government regulations.
+    </p>
+    <a href="kyc-confirmation.html">
+      <button class="kyc-button">Already Applied? Start KYC</button>
+    </a>
+    <p class="kyc-note">
+      This process involves a quick video call as per RBI guidelines.
+    </p>
+  </div>
+
+
+</body>
+
+</html>
