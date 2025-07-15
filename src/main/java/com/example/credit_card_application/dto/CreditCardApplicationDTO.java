@@ -1,5 +1,6 @@
 package com.example.credit_card_application.dto;
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 
@@ -42,6 +43,10 @@ public class CreditCardApplicationDTO {
     @NotBlank(message = "PIN code is required")
     @Pattern(regexp = "^[0-9]{6}$", message = "PIN code must be 6 digits")
     private String pinCode;
+
+    @NotBlank(message = "card type is required")
+    @Column(name = "card_Type")
+    private String cardType;
 
     @NotBlank(message = "State is required")
     private String state;

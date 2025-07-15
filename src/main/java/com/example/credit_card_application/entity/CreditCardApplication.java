@@ -68,6 +68,10 @@ public class CreditCardApplication {
     @Column(name = "pin_code")
     private String pinCode;
 
+    @NotBlank(message = "card type is required")
+    @Column(name = "card_Type")
+    private String cardType;
+
     @NotBlank(message = "State is required")
     @Column(name = "state")
     private String state;
